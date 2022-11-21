@@ -82,6 +82,7 @@ c
 c              dzu(1,k) = - (s(j)*tv1 + a*tv2 )*rtv(j)
 c              dzu(2,k) = - (a*tv4 - sv(j)*tv5 )*rtv3(j)
 ccc as JEFF/Bob
+c
                dzu(1,k) = - (s(j)*tv1 + drag(1,i,j)*tv2 )*rtv(i,j)
                dzu(2,k) = - (drag(2,i,j)*tv4 - sv(j)*tv5 )*rtv3(i,j)
                do l=1,2

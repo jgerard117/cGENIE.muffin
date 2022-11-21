@@ -1,0 +1,10 @@
+OUTROOT=/home/elic/jgerard/cgenie_output
+CODEDIR=/home/elic/jgerard/cgenie.muffin
+RUNTIME_ROOT=../../cgenie.muffin
+RUNTIME_OUTDIR=.
+EXPID=RCP8.5
+FIXEDATMOSFILE=data_fixedatmos
+GLIMMERFILE=data_glimmer.config
+igcm_module=genie-igcm
+BFGROOT=EMPTY
+MODULE_NAMES='embm goldstein goldsteinseaice biogem atchem '
