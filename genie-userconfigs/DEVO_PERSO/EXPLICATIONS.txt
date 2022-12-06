@@ -1,0 +1,33 @@
+#-----------------------------------------------------------------------------------------------------#
+# Un fichier qui reprend les quelques points à traiter pour faire un base et user config sur cGENIE   #
+#-----------------------------------------------------------------------------------------------------#
+
+#
+# BASE-CONFIG
+#
+
+- La première chose à faire c'est utiliser muffingen pour obtenir tout un tas de quantités très importantes comme la topographie, la bathymétrie, les champs de vent et d'albédo. Il est également 
+  conseiller de repartir d'un autre fichier base-config pour avoir la forme générale. Ensuite on vire tout entre "insert the automatically generated muffingen parameter list here" et 
+  "GEOLOGIC AGE DEPENDENT PARAMETERS" et en copy-paste le contenu du fichier qui à une forme du style "config_221206.txt". Il faut bien faire attention à ne pas avoir d'info qui se répète et c'est
+  parfois pas mal de checker la configuration orbitale et la constante solaire (AP à filer un code R pour ça). 
+
+- Ensuite on fait la liste des courses, c'est-à-dire l'ensemble des tracuers qu'on souhaite étudier. Pour savoir si un traceur dépend d'un autre on peut regarder la liste qui existe dans genie-main
+  dans le répertoire "data/input". 
+
+- Enfin, on a les paramètres physique mais c'est vraiment rare de les modifier (AP ne les a jamais modifié par exemple).
+
+#
+# USER-CONFIG
+# 
+
+- Généralement, on ne va pas modifier ce qui se passe avant la section "REMINERALIZATION", car il s'agit de chose qui ne varie pas (beaucoup) dans le temps.
+
+- Une fois arrivé à cette section, il est souvent important de se poser et de réfléchir à quel type de schéma on veut utiliser. Malheureusement, il n'existe pas de solution simple qui s'applique 
+  tout le temps. Il existe différents type de schéma : Courbe de Martin, double exponentielle, T-dep. Bien souvent on aime les schéma de reminéralisation T-dep (donc c'est eux qu'on va utiliser dans
+  la plupart des cas). Mais attention, car il en existe de différents types comme "John 2014" ou plus récemment "Crichon-2020".
+
+- On termine par des choses plus simples, comme définir le taux de sauvegarde (tout les combien de temps en enregistre les différentes quantités), poser le niveau de sauvegarde (combien de variables
+  vont être sauvegarder), imposer des forçages ou encore donner une configuration astronomique au système. 
+
+ASTUCE : Quand on veut faire une étude, il faut être capable de justifier toutes les étapes et la configuration des expériences ne fait pas exception ! Il est alors très pratique de se baser sur des
+         choses qui ont déjà été publiées (schéma de reminéralisation, concentrations atmosphériques et océaniques, configuration continentale, vents, albédo, bathymétrie, etc.). Donc faut LIRE !!!
